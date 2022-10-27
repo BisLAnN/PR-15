@@ -11,7 +11,7 @@ class SecondActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second3)
+        setContentView(R.layout.activity_second)
         val textView: TextView = findViewById(R.id.textView)
         var user: User = User()
         val arguments: Bundle? = intent.extras
@@ -20,7 +20,7 @@ class SecondActivity : AppCompatActivity() {
                 arguments.getParcelable<User>(user.javaClass.simpleName) as User
             textView.text =
                 "Месяц рождения: ${user.getMonth()}\n" +
-                        "Год рождения: ${user.getYear()}\n Порода: ${user.getBreed()}"
+                        "Год рождения: ${user.getYear()}\nПорода: ${user.getBreed()}"
         }
     }
 

@@ -21,17 +21,12 @@ class MainActivity : AppCompatActivity() {
         val breed = breedText.text.toString()
         val year = yearOfBirthText.text.toString()
         val month = monthOfBirthText.text.toString()
-        val user: SecondActivity.User = SecondActivity.User(breed, year, month)
+        val user : SecondActivity.User = SecondActivity.User (month, year, breed)
         val intent: Intent = Intent(
             this@MainActivity,
-            SecondActivity::class.java
-        )
+            SecondActivity::class.java)
         intent.putExtra(user.javaClass.simpleName, user)
-    }
-
-    fun onClick(view: View) {
-        val intent: Intent = Intent(this@MainActivity, SecondActivity::class.java)
-        when (view.id) {
+        when (view.id){
             R.id.buttonSave -> startActivity(intent)
         }
     }
