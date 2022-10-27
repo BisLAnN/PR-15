@@ -19,7 +19,8 @@ class SecondActivity : AppCompatActivity() {
             user =
                 arguments.getParcelable<User>(user.javaClass.simpleName) as User
             textView.text =
-                "Порода: ${user.getBreed()}\nГод рождения: ${user.getYear()}\nМесяц рождения: ${user.getMonth()}"
+                "Месяц рождения: ${user.getMonth()}\n" +
+                        "Год рождения: ${user.getYear()}\n Порода: ${user.getBreed()}"
         }
     }
 
